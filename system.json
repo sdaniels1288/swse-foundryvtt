@@ -1,0 +1,23 @@
+{
+    "name": "swse-foundryvtt",
+    "title": "Star Wars Saga Edition (UNOFFICIAL)",
+    "description": "An unofficial port of the Wizards of the Coast Star Wars Saga Edition d20 RPG for Foundry VTT",
+    "author": "sdaniels1288",
+    "version": "0.0.1",
+    "minimumCoreVersion": "9",
+    "compatibleCoreVersion": "9",
+    "esmodules": [ "swse.js" ],
+    "styles": [ "swse.css" ],
+    "languages": [
+        {
+            "lang": "en",
+            "name": "English",
+            "path": "lang/en.json"
+        }
+    ],
+    "primaryTokenAttribute": "attributes.hitPoints",
+    "secondaryTokenAttribute": "attributes.forcePoints",
+    "url": "https://github.com/sdaniels1288/swse-foundryvtt",
+    "manifest": "https://github.com/sdaniels1288/swse-foundryvtt/system.json",
+    "download": "https://github.com/sdaniels1288/swse-foundryvtt/archive/refs/heads/main.zip"
+}

@@ -1,0 +1,232 @@
+{
+    "Actor": {
+        "types": [ "playerCharacter", "npc"],
+        "templates": {
+            "common": {
+                "abilities": {
+                    "str": {
+                        "total": 10,
+                        "bonus": 0,
+                        "value": 10
+                    },
+                    "dex": {
+                        "total": 10,
+                        "bonus": 0,
+                        "value": 10
+                    },
+                    "con": {
+                        "total": 10,
+                        "bonus": 0,
+                        "value": 10
+                    },
+                    "int": {
+                        "total": 10,
+                        "bonus": 0,
+                        "value": 10
+                    },
+                    "wis": {
+                        "total": 10,
+                        "bonus": 0,
+                        "value": 10
+                    },
+                    "cha": {
+                        "total": 10,
+                        "bonus": 0,
+                        "value": 10
+                    }
+                },
+                "attributes": {
+                    "hitPoints": 10,
+                    "defenses": {
+                        "reflex": 10,
+                        "fortitude": 10,
+                        "will": 10
+                    },
+                    "damageThreshold": 10,
+                    "baseAttackBonus": 0,
+                    "speed": 6,
+                    "condition": 0
+                },
+                "details": {
+                    "credits": 0
+                }
+            },
+            "creature": {
+            },
+            "playerCharacter": {
+                "templates": ["common"],
+                "attributes": {
+                    "forcePoints": 5,
+                    "destinyPoints": 1
+                },
+                "details": {
+                    "xp": 0,
+                    "level": 0
+                }
+            }
+        }
+    },
+    "Item": {
+        "types": ["weapon", "equipment", "consumable", "tool", "loot", "class", "spell", "feat", "backpack"],
+        "templates": {
+          "itemDescription": {
+            "description": {
+              "value": "",
+              "chat": ""
+            },
+            "source": ""
+          },
+          "physicalItem": {
+            "quantity": 1,
+            "weight": 0,
+            "price": 0,
+            "equipped": false,
+            "availability": ""
+          },
+          "activatedEffect": {
+            "activation": {
+              "type": "",
+              "cost": 0,
+              "condition": ""
+            },
+            "duration": {
+              "value": null,
+              "units": ""
+            },
+            "target": {
+              "value": null,
+              "width": null,
+              "units": "",
+              "type": ""
+            },
+            "range": {
+              "value": null,
+              "long": null,
+              "units": ""
+            },
+            "uses": {
+              "value": null,
+              "max": "",
+              "per": null
+            },
+            "consume": {
+              "type": "",
+              "target": null,
+              "amount": null
+            }
+          },
+          "action": {
+            "ability": null,
+            "actionType": null,
+            "attackBonus": 0,
+            "chatFlavor": "",
+            "critical": {
+              "threshold": null,
+              "damage": ""
+            },
+            "damage": {
+              "parts": [],
+              "versatile": ""
+            },
+            "formula": "",
+            "save": {
+              "ability": "",
+              "dc": null,
+              "scaling": "spell"
+            }
+          },
+          "mountable": {
+            "armor": {
+              "value": 10
+            },
+            "hp": {
+              "value": 0,
+              "max": 0,
+              "dt": null,
+              "conditions": ""
+            }
+          }
+        },
+        "htmlFields": ["description.value", "description.chat", "description.unidentified"],
+        "backpack": {
+          "templates": ["itemDescription", "physicalItem"],
+          "capacity": {
+            "type": "weight",
+            "value": 0,
+            "weightless": false
+          },
+          "credits": 0
+        },
+        "class": {
+          "templates": ["itemDescription"],
+          "levels": 1,
+          "subclass": "",
+          "hitDice": "d6",
+          "hitDiceUsed": 0,
+          "saves": [],
+          "skills": {
+            "number": 2,
+            "choices": [],
+            "value": []
+          },
+          "spellcasting": {
+            "progression": "none",
+            "ability": ""
+          }
+        },
+        "consumable": {
+          "templates": ["itemDescription", "physicalItem", "activatedEffect", "action"],
+          "consumableType": "potion",
+          "uses": {
+            "autoDestroy": false
+          }
+        },
+        "equipment": {
+          "templates": ["itemDescription", "physicalItem", "activatedEffect", "action", "mountable"],
+          "armor": {
+            "type": "light",
+            "value": null,
+            "dex": null
+          },
+          "baseItem": "",
+          "speed": {
+            "value": null,
+            "conditions": ""
+          },
+          "strength": 0,
+          "stealth": false,
+          "proficient": true
+        },
+        "feat": {
+          "templates": ["itemDescription", "activatedEffect", "action"],
+          "requirements": "",
+          "recharge": {
+            "value": null,
+            "charged": false
+          }
+        },
+        "loot": {
+          "templates": ["itemDescription", "physicalItem"]
+        },
+        "tool": {
+          "templates": ["itemDescription", "physicalItem"],
+          "toolType": "",
+          "baseItem": "",
+          "ability": "int",
+          "chatFlavor": "",
+          "proficient": 0,
+          "bonus": ""
+        },
+        "forcePower": {
+          "templates": ["itemDescription", "activatedEffect", "action"],
+          "used": false
+        },
+        "weapon": {
+          "templates": ["itemDescription", "physicalItem" ,"activatedEffect", "action", "mountable"],
+          "weaponType": "simpleM",
+          "baseItem": "",
+          "properties": {},
+          "proficient": true
+        }
+      }
+}
