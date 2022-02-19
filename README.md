@@ -1,2 +1,4 @@
 # swse-foundryvtt
 An unofficial port of the Wizards of the Coast Star Wars Saga Edition d20 RPG for Foundry VTT
+
+DISCLAIMER: I AM IN NO WAY AFFILIATED WITH WIZARDS OF THE COAST. THIS IS MERELY A PASSION PROJECT INTENDED FOR PERSONAL (NON-COMMERCIAL) USE.
