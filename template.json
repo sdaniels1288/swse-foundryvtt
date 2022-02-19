@@ -67,7 +67,7 @@
         }
     },
     "Item": {
-        "types": ["weapon", "equipment", "consumable", "tool", "loot", "class", "spell", "feat", "backpack"],
+        "types": ["weapon", "equipment", "consumable", "tool", "loot", "class", "forcePower", "talent", "backpack"],
         "templates": {
           "itemDescription": {
             "description": {
@@ -197,7 +197,7 @@
           "stealth": false,
           "proficient": true
         },
-        "feat": {
+        "talent": {
           "templates": ["itemDescription", "activatedEffect", "action"],
           "requirements": "",
           "recharge": {

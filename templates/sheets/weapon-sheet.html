@@ -1,0 +1,59 @@
+<form class="{{cssClass}}" autocomplete="off">
+    <header class="sheet-header">
+        <img src="{{item.img}}" data-edit="img" title="{{item.name}}" height="64" width="64"/>
+        <h1><input name="name" type="text" value="{{item.name}}" placeholder="{{ localize 'Name' }}"/></h1>
+    </header>
+    <div>
+        <table>
+            <tr>
+                <th>{{localize "SWSE.categories.weaponType"}}</th>
+                <th>{{localize "SWSE.categories.size"}}</th>
+                <th>{{localize "SWSE.properties.cost"}}</th>
+                <th>{{localize "SWSE.properties.damage"}}</th>
+                <th>{{localize "SWSE.properties.stunDmg"}}</th>
+                <th>{{localize "SWSE.properties.weight"}}</th>
+                <th>{{localize "SWSE.categories.availability"}}</th>
+            </tr>
+            <td>
+                <select name="data.weaponType">
+                    {{#select data.weaponType}}
+                    {{#each config.weaponType as |name type|}}
+                    <option value="{{type}}">{{localize name}}</option>
+                    {{/each}}
+                    {{/select}}
+                </select>
+            </td>
+            <td>
+                <select name="data.properties.size">
+                    {{#select data.properties.size}}
+                    {{#each config.size as |name size|}}
+                    <option value="{{size}}">{{localize name}}</option>
+                    {{/each}}
+                    {{/select}}
+                </select>
+            </td>
+            <td>
+                <input name="data.properties.cost" type="text" value="{{data.properties.cost}}" data-dtype="Number" />
+            </td>
+            <td>
+                <input name="data.properties.damage" type="text" value="{{data.properties.damage}}" data-dtype="String" />
+            </td>
+            <td>
+                <input name="data.properties.stunDmg" type="text" value="{{data.properties.stunDmg}}" data-dtype="String" />
+            </td>
+            <td>
+                <input name="data.properties.weight" type="text" value="{{data.properties.weight}}" data-dtype="Number" />
+            </td>
+            <td>
+                <select name="data.properties.availability">
+                    {{#select data.properties.availability}}
+                    {{#each config.availability as |name availability|}}
+                    <option value="{{availability}}" >{{localize name}}</option>
+                    {{/each}}
+                    {{/select}}
+                </select>            </td>
+        </table>
+    </div>
+</form>
+
+<option
